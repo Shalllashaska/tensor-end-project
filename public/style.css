@@ -120,7 +120,7 @@
 }
 
 .content__section {
-  height: 325px;
+  height: min-content;
   grid-column-start: inherit;
   grid-column-end: inherit;
   padding: 15px 35px 15px 35px;
@@ -130,6 +130,7 @@
 .content__musicList {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .content__item {
@@ -231,7 +232,6 @@
   width: inherit;
   display: flex;
   flex-direction: column;
-
 }
 
 .allSearchResultItem {
