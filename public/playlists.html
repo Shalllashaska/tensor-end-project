@@ -9,29 +9,20 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <script type="module" src="./search.js" defer></script>
+    <script src="./playlistScript.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
-    <title>Клон Spotify Поиск</title>
+    <title>React App</title>
   </head>
   <body class="app">
     <header class="header">
       <form action="" class="form_input">
         <input
-        type="text"
-        class="header__search"
-        placeholder="Исполнитель, трек или подкаст"
-        required
-      />
-      </form>  
+          type="text"
+          class="header__search inputPlaylist"
+          placeholder="Введите название плейлиста"
+          required
+        />
+      </form>
     </header>
 
     <aside class="accordion">
@@ -51,33 +42,23 @@
 
     <div class="content">
       <section class="content__section searchSection">
-        <div class="bestSearchResultDiv">
-          <h2>Лучший результат</h2>
-          <!--<div class="bestSearchItem">
-            <a>
-              <img
+        <div class="bestSearchResultDiv playlistList">
+          <h2>Плейлисты</h2>
+          <div class="bestSearchItem playlistTab" >
+            <div class="playlistImg">
+                <img
                 src="testSongImg.jpg"
                 class="content__imgSong searchImg"
                 alt=""
               />
-              <h1>Layla</h1>
-              <br />
-              <p class="groupName">Derek and The Dominos</p>
-            </a>
-          </div>-->
-          
+              <button class="deletePlayelist">X</button>
+            </div>
+            <h1 class="playlistName">Layla</h1>
+          </div> 
         </div>
-        <div class="allSearchResultDiv">
-          <h2>Треки</h2>
+        <div class="allSearchResultDiv playlistTracks">
+          <h2>Треки в плейлисте <sapn class="span__playlistName"></sapn></h2>
           <div class="allSearchResultContent">
-            <!--<div class="allSearchResultItem">
-              <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
-              <div class="nameSong">
-                <p class="name">Layla</p>
-                <p class="groupName">Derek and Dominos</p>
-              </div>
-              <p class="time">5:00</p>
-            </div>
             <div class="allSearchResultItem">
               <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
               <div class="nameSong">
@@ -93,7 +74,15 @@
                 <p class="groupName">Derek and Dominos</p>
               </div>
               <p class="time">5:00</p>
-            </div>-->
+            </div>
+            <div class="allSearchResultItem">
+              <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
+              <div class="nameSong">
+                <p class="name">Layla</p>
+                <p class="groupName">Derek and Dominos</p>
+              </div>
+              <p class="time">5:00</p>
+            </div>
           </div>
         </div>
       </section>

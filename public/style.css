@@ -134,6 +134,7 @@
 }
 
 .content__item {
+  text-decoration: none;
   height: 200px;
   width: 185px;
   background-color: #5c1f54;
@@ -152,7 +153,7 @@
   width: inherit;
   border-radius: 17px;
   align-self: center;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .content__nameSong {
@@ -201,6 +202,14 @@
   width: 100px;
 }
 
+.bestSearchItemName{
+   height: 50px;
+}
+
+.bestSearchItemArtist{
+ height: 25px;
+}
+
 .bestSearchItem {
   padding: 20px;
   margin-top: 25px;
@@ -215,12 +224,37 @@
   border-radius: 20px;
 }
 
+.overflowHIdden {
+  overflow: hidden;
+  white-space: nowrap;
+text-overflow: ellipsis;
+}
+
 .bestSearchItem:hover {
   background-color: #654374;
 }
 
 .bestSearchItem:active {
   background-color: #34263a;
+}
+
+
+.deletePlayelist{
+  float: right;
+  width:45px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #e91f1f;
+  background-color: rgb(26, 24, 24);
+}
+
+.deletePlayelist:hover{
+  background-color: rgb(73, 72, 72);
+}
+
+.deletePlayelist:active {
+  background-color: #000000;
 }
 
 .groupName {
@@ -235,6 +269,7 @@
 }
 
 .allSearchResultItem {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
   width: inherit;
@@ -262,4 +297,10 @@
 
 .allSearchResultItem:active {
   background-color: #09070aab;
+}
+
+.bestSearchItem a{
+  text-decoration: none;
+  display: block;
+  height: 100%;
 }
