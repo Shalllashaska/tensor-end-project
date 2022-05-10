@@ -20,15 +20,13 @@
     -->
 
     <link rel="stylesheet" href="./style.css" />
-    <title>React App</title>
+
+    <script type="module" src="./index.js" defer></script>
+    <title>Клон Spotify</title>
   </head>
   <body class="app">
+    <header class="header"></header>
 
-    <header class="header">
-        
-    </header>
-
-    
     <aside class="accordion">
       <a href="./index.html" class="accordion__logo link">
         <img src="./adidas.png" width="42px" alt="" class="logo" />
@@ -39,103 +37,21 @@
         <a href="./search.html" class="accordion__link link">Поиск</a>
       </nav>
       <nav class="accordion__navigation">
-        <a href="" class="accordion__link link">Создать плейлист</a>
+        <a href="./playlists.html" class="accordion__link link">Плейлисты</a>
       </nav>
     </aside>
 
     <div class="content">
-        <section class="content__section">
-            <h2 class="content__sectionName">Недавно прослушанные</h2>
-            <div class="content__musicList">
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-            </div>
-            
-        </section>
-        <section class="content__section">
-            <h2 class="content__sectionName">Рекомендации</h2>
-            <div class="content__musicList">
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-            
-            </div>
-        </section>
-        
-        <section class="content__section">
-            <h2 class="content__sectionName">Рекомендации</h2>
-            <div class="content__musicList">
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-            
-            </div>
-        </section>
-        <section class="content__section">
-            <h2 class="content__sectionName">Рекомендации</h2>
-            <div class="content__musicList">
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-                <button type="submit"  class="content__item buttonPlayeSong">
-                    <div class="content__buttonWrapper">
-                        <img src="./testSongImg.jpg" alt="" class="content__imgSong">
-                        <p class="content__nameSong">Layla - Derek And Dominos</p>
-                    </div>
-                </button>
-            
-            </div>
-        </section>
-        
+      <section class="content__section">
+        <h2 class="content__sectionName">ТОП ИСПОЛНИТЕЛЕЙ</h2>
+        <div class="content__musicList topArtistsSection"></div>
+      </section>
+      <section class="content__section">
+        <h2 class="content__sectionName">ТОП ТРЕКОВ</h2>
+        <div class="content__musicList topSongSection"></div>
+      </section>
     </div>
 
-
-    <footer class="footer">
-
-    </footer>
-
+    <footer class="footer"></footer>
   </body>
 </html>
