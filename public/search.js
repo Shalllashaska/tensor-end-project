@@ -6,16 +6,35 @@ const searchInput = document.querySelector('.header__search');
 const searchResult = document.querySelector('.allSearchResultContent');
 const searchBestResult = document.querySelector('.bestSearchResultDiv');
 
+let curTracks;
+let curBestTrack;
+
 
 searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const track = searchInput.value;
 
-    const tracks = await lastfmServices.searchTrack(track);
+    if(curTracks != null || curBestTrack != null){
+        console.log('Waiting of fetch');
+        return;
+    }
 
-    const bestTrack = await lastfmServices.getTrackInfo(tracks[0].name, tracks[0].artist);
-    searchUpdate(tracks, bestTrack);
+    try{
+        curTracks = await lastfmServices.searchTrack(track);
+
+        curBestTrack = await lastfmServices.getTrackInfo(curTracks[0].name, curTracks[0].artist);
+        
+        searchUpdate(curTracks, curBestTrack);
+
+        return;
+    }
+    catch(err){
+        console.error(err);
+    }
+
+    curBestTrack = null;
+    curTracks = null;
 });
 
 

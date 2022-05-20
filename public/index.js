@@ -4,7 +4,7 @@ const topArtistsSection = document.querySelector('.topArtistsSection');
 const topSongsSection = document.querySelector('.topSongSection');
 const content = document.querySelector('.content');
 
-document.onload = startPage();
+document.onload = await startPage();
 
 
 async function startPage(){
@@ -14,7 +14,7 @@ async function startPage(){
 
     loadTops(topArtists, topArtistsSection);
     loadTops(topTracks, topSongsSection);
-    startTags()
+    await startTags()
 }
 
 
@@ -22,7 +22,7 @@ async function startTags(){
 
     const topTags = await lastfmServices.getTopTags();
     for(let i = 0; i < topTags.length; i++){
-        loadTag(topTags[i], i);
+        await loadTag(topTags[i], i);
     }
 }
 

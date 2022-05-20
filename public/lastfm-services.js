@@ -3,14 +3,15 @@ export default {
     _apiKey: "942509cc0d5a8a47d78dcfbb731f2c3a",
     _apiFormat: "json",
 
-
     //Результат запроса
     async getResources(params) {
+
         const qs = this._convertToString({
             ...params,
             api_key: this._apiKey,
             format: this._apiFormat,
         });
+
 
         const res = await fetch(`${this._apiUrl}?${qs}`);
 
@@ -19,7 +20,9 @@ export default {
         }
 
         return res.json();
+
     },
+
     // Запрос получения информации о ипсолнителе
     async getArtistInfo(artist) {
 
