@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <script src="./playlistScript.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>React App</title>
+  </head>
+  <body class="app">
+    <header class="header">
+      <form action="" class="form_input">
+        <input
+          type="text"
+          class="header__search inputPlaylist"
+          placeholder="Введите название плейлиста"
+          required
+        />
+      </form>
+    </header>
+
+    <aside class="accordion">
+      <a href="./index.html" class="accordion__logo link">
+        <img src="./adidas.png" width="42px" alt="" class="logo" />
+        <h1 class="accordoin__title title">Spotiфу</h1>
+      </a>
+      <nav class="accordion__navigation">
+        <a href="./index.html" class="accordion__link link">Главная</a>
+        <a href="./search.html" class="accordion__link link">Поиск</a>
+      </nav>
+
+      <nav class="accordion__navigation">
+        <a href="./playlists.html" class="accordion__link link">Плейлисты</a>
+      </nav>
+    </aside>
+
+    <div class="content">
+      <section class="content__section searchSection">
+        <div class="bestSearchResultDiv playlistList">
+          <h2>Плейлисты</h2>
+          <div class="bestSearchItem playlistTab" >
+            <div class="playlistImg">
+                <img
+                src="testSongImg.jpg"
+                class="content__imgSong searchImg"
+                alt=""
+              />
+              <button class="deletePlayelist">X</button>
+            </div>
+            <h1 class="playlistName">Layla</h1>
+          </div> 
+        </div>
+        <div class="allSearchResultDiv playlistTracks">
+          <h2>Треки в плейлисте <sapn class="span__playlistName"></sapn></h2>
+          <div class="allSearchResultContent">
+            <div class="allSearchResultItem">
+              <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
+              <div class="nameSong">
+                <p class="name">Layla</p>
+                <p class="groupName">Derek and Dominos</p>
+              </div>
+              <p class="time">5:00</p>
+            </div>
+            <div class="allSearchResultItem">
+              <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
+              <div class="nameSong">
+                <p class="name">Layla</p>
+                <p class="groupName">Derek and Dominos</p>
+              </div>
+              <p class="time">5:00</p>
+            </div>
+            <div class="allSearchResultItem">
+              <img src="testSongImg.jpg" class="cover" width="50px" alt="" />
+              <div class="nameSong">
+                <p class="name">Layla</p>
+                <p class="groupName">Derek and Dominos</p>
+              </div>
+              <p class="time">5:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
