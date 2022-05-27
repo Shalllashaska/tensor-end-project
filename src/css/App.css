@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f0e3c0;
+  }
+  
+  .App {
+    display: grid;
+    height: 100vh;
+    background: rgb(92, 10, 116);
+    background: linear-gradient(
+      30deg,
+      rgba(92, 10, 116, 1) 0%,
+      rgb(107, 77, 131) 98%
+    );
+    overflow: hidden;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: min-content 1fr min-content;
+  }
+  
+  .header {
+    height: 100px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 25px;
+  }
+  
+  .header__search {
+    width: 100%;
+    min-width: 100px;
+    max-width: 500px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    padding-left: 24px;
+    color: #120b14;
+  }
+  
+  .content::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;
+    background: linear-gradient(
+      30deg,
+      rgba(92, 10, 116, 1) 0%,
+      rgb(107, 77, 131) 98%
+    );
+    border-radius: 10em;
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: #814ca0;
+    border-radius: 9em;
+  }
+  
+  .footer {
+    height: 100px;
+    background: #3e2549;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .accordion {
+    background: rgb(154, 70, 194);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 30px 50px;
+  }
+  
+  .accordion__logo {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 60px;
+  }
+  
+  .logo {
+    flex-shrink: 0;
+    margin: 10px;
+  }
+  
+  .accordoin__title {
+    align-self: center;
+  }
+  
+  .accordion__navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .accordion__link {
+    margin-top: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #f0e3c0;
+  }
+  
+  .link:hover {
+    color: #c9ba92;
+  }
+  
+  .content {
+    color: #f0e3c0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  
+  .content__section {
+    height: min-content;
+    grid-column-start: inherit;
+    grid-column-end: inherit;
+    padding: 15px 35px 15px 35px;
+    margin-bottom: 20px;
+  }
+  
+  .content__musicList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .content__item {
+    text-decoration: none;
+    height: 200px;
+    width: 185px;
+    background-color: #5c1f54;
+    margin-top: 10px;
+    margin-right: 22px;
+    border-radius: 17px;
+    padding: 20px;
+  }
+  
+  .content__buttonWrapper {
+    height: 160px;
+    width: 145px;
+  }
+  
+  .content__imgSong {
+    width: inherit;
+    border-radius: 17px;
+    align-self: center;
+    margin-bottom: 5px;
+  }
+  
+  .content__nameSong {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .buttonPlayeSong {
+    border: none;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .buttonPlayeSong:hover {
+    background-color: #702b67;
+  }
+  
+  .buttonPlayeSong:active {
+    background-color: #943a88;
+    transition: all ease-in-out 0.1s;
+  }
+  
+  .searchSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .bestSearchResultDiv {
+    height: inherit;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+  
+    margin-right: 30px;
+  }
+  
+  .allSearchResultDiv {
+    height: inherit;
+    width: 100%;
+    max-width: 800px;
+    min-width: 200px;
+  }
+  
+  .searchImg {
+    width: 100px;
+  }
+  
+  .bestSearchItemName{
+     height: 50px;
+  }
+  
+  .bestSearchItemArtist{
+   height: 25px;
+  }
+  
+  .bestSearchItem {
+    padding: 20px;
+    margin-top: 25px;
+    width: 100%;
+    max-width: 350px;
+    min-width: 150px;
+    height: 100%;
+    max-height: 225px;
+    min-height: 100px;
+    background-color: #3e2549;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  .overflowHIdden {
+    overflow: hidden;
+    white-space: nowrap;
+  text-overflow: ellipsis;
+  }
+  
+  .bestSearchItem:hover {
+    background-color: #654374;
+  }
+  
+  .bestSearchItem:active {
+    background-color: #34263a;
+  }
+  
+  
+  .deletePlayelist{
+    float: right;
+    width:45px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    color: #e91f1f;
+    background-color: rgb(26, 24, 24);
+  }
+  
+  .deletePlayelist:hover{
+    background-color: rgb(73, 72, 72);
+  }
+  
+  .deletePlayelist:active {
+    background-color: #000000;
+  }
+  
+  .groupName {
+    color: #807969;
+  }
+  
+  .allSearchResultContent {
+    margin-top: 30px;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .allSearchResultItem {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    padding: 5px;
+  }
+  
+  .nameSong {
+    margin-right: auto;
+    margin-left: 10px;
+    align-self: center;
+  }
+  
+  .cover {
+    margin-left: 10px;
+  }
+  
+  .time {
+    align-self: center;
+    margin-right: 20px;
+  }
+  
+  .allSearchResultItem:hover {
+    background-color: #221b2577;
+  }
+  
+  .allSearchResultItem:active {
+    background-color: #09070aab;
+  }
+  
+  .bestSearchItem a{
+    text-decoration: none;
+    display: block;
+    height: 100%;
+  }
